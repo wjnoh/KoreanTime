@@ -1,28 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Ionicon from "react-ionicons";
 import "./styles.scss";
 
 const Navigation = props => {
-  const { match } = props;
-
   return (
     <nav className="nav">
       <ul className="nav__items">
         <li className="nav__item">
-          <Link
-            to="/"
-            className={match.params.category === undefined ? "selected" : ""}
-          >
-            App
-          </Link>
+          <Ionicon icon="ios-search" />
         </li>
         <li className="nav__item">
-          <Link
-            to="/posts"
-            className={match.params.category === "posts" ? "selected" : ""}
-          >
-            Posts
+          <Link to="/">KoreanTime</Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/">
+            <Ionicon icon="md-contact" />
           </Link>
         </li>
       </ul>

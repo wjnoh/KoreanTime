@@ -1,0 +1,19 @@
+@import "../../shared/_mediaQuery.scss";
+@import "../../shared/_color.scss";
+
+.party-cards {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  color: white;
+  .party-cards__conatiner {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
+}
