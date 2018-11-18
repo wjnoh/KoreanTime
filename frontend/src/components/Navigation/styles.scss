@@ -1,0 +1,11 @@
+.nav {
+  .nav__items {
+    .nav__item {
+      a {
+        &.selected {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
