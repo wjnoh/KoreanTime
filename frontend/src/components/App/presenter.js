@@ -2,20 +2,39 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Navigation from "../Navigation";
 import PartyCards from "../PartyCards";
+import Footer from "../Footer";
+import Party from "../Party";
 import "./styles.scss";
 
 const App = props => {
   return (
-    <main className="main">
-      <Switch>
+    <>
+      <Route path="/" render={({ match }) => <Navigation match={match} />} />
+      <main className="main">
         <Route
-          path="/:category"
-          render={({ match }) => <Navigation match={match} />}
+          exact
+          path="/"
+          render={() => {
+            return <PartyCards />;
+          }}
         />
-        <Route path="/" render={({ match }) => <Navigation match={match} />} />
-      </Switch>
-      <PartyCards />
-    </main>
+        <Switch>
+          <Route
+            path="/party/:partyId"
+            render={() => {
+              return <Party />;
+            }}
+          />
+          <Route
+            path="/party"
+            render={() => {
+              return <PartyCards />;
+            }}
+          />
+        </Switch>
+      </main>
+      <Footer />
+    </>
   );
 };
 

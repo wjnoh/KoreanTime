@@ -2,9 +2,16 @@
 @import "../../shared/_color.scss";
 
 .party-cards {
-  padding-top: 70px;
-  padding-bottom: 10px;
-  color: white;
+  h1 {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    z-index: 10;
+  }
   .party-cards__conatiner {
     max-width: 900px;
     height: 100%;

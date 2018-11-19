@@ -7,19 +7,23 @@ import "./styles.scss";
 const Navigation = props => {
   return (
     <nav className="nav">
-      <ul className="nav__items">
-        <li className="nav__item">
-          <Ionicon icon="ios-search" />
-        </li>
-        <li className="nav__item">
-          <Link to="/">KoreanTime</Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/">
-            <Ionicon icon="md-contact" />
-          </Link>
-        </li>
-      </ul>
+      <div className="nav__wrapper">
+        <ul className="nav__items">
+          <li className="nav__item">
+            <Ionicon icon="ios-search" />
+          </li>
+          <li className="nav__item">
+            <Link to="/">
+              <img src={require("../../images/logo.png")} alt="" />
+            </Link>
+          </li>
+          <li className="nav__item">
+            <Link to="/">
+              <Ionicon icon="md-contact" />
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
