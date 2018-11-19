@@ -14,10 +14,7 @@ const PartyCard = props => {
             </div>
           ) : (
             <Link to="/party/1">
-              <img
-                src="http://www.topstarnews.net/news/photo/201807/450297_101922_452.jpg"
-                alt="Party Photo"
-              />
+              <img src={require("../../images/sample.png")} alt="party" />
               <span>유니스트</span>
             </Link>
           )}

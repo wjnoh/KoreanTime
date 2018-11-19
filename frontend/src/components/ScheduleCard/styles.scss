@@ -1,0 +1,48 @@
+@import "../../shared/_mediaQuery.scss";
+@import "../../shared/_color.scss";
+
+.party__schedule {
+  height: 140px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .party__schedule-info {
+    span {
+      display: block;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .schedule-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .schedule-detail {
+      font-size: 14px;
+    }
+    .schedule-message {
+      font-size: 14px;
+    }
+  }
+  .schedule-location {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    background-color: $main-sky-blue;
+    border-radius: 20px;
+    color: white;
+    margin-top: 15px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
