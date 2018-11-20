@@ -94,7 +94,7 @@
           font-weight: bold;
         }
         .content-when {
-          margin-top: 20px;
+          margin-top: 15px;
           font-size: 15px;
         }
         .content-where {
@@ -102,12 +102,30 @@
           font-size: 15px;
         }
         .content-arrived {
-          margin-top: 20px;
+          margin-top: 15px;
           font-size: 15px;
+          .person-name {
+            display: inline-block;
+            margin-left: 5px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
         }
         .content-notArrived {
           margin-top: 10px;
           font-size: 15px;
+          .person-name {
+            display: inline-block;
+            margin-left: 5px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
         }
       }
     }

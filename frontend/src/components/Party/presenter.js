@@ -12,7 +12,7 @@ const Party = () => {
             <div className="party__info">
               <img src={require("../../images/sample.png")} alt="party" />
               <span className="info-number">인원 6명</span>
-              <span className="info-when">3월 24일 개설</span>
+              <span className="info-when">03월 24일 개설</span>
             </div>
             <div className="party__menus">
               <div className="party__menu">
