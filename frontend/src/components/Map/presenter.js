@@ -2,6 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import Ionicon from "react-ionicons";
 import PropTypes from "prop-types";
+import googleKeys from "../../shared/googleKeys.json";
 import "./styles.scss";
 
 const Map = props => {
@@ -14,7 +15,7 @@ const Map = props => {
         <section className="map">
           <GoogleMapReact
             bootstrapURLKeys={{
-              key: "AIzaSyCluD-n1MOKpKT6ckGfqcH76cAmBy1Y9aM"
+              key: googleKeys.googleMap
             }}
             center={{ lat: 36.3610488, lng: 127.34477300000003 }}
             defaultZoom={15}
