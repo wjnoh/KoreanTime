@@ -20,7 +20,6 @@
     .party__cols {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 30px;
       @include tablet {
         display: block;
       }

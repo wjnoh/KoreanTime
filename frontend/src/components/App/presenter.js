@@ -4,6 +4,7 @@ import Navigation from "../Navigation";
 import PartyCards from "../PartyCards";
 import Footer from "../Footer";
 import Party from "../Party";
+import Map from "../Map";
 import "./styles.scss";
 
 const App = props => {
@@ -19,6 +20,12 @@ const App = props => {
           }}
         />
         <Switch>
+          <Route
+            path="/party/:partyId/map/:mapId"
+            render={() => {
+              return <Map />;
+            }}
+          />
           <Route
             path="/party/:partyId"
             render={() => {

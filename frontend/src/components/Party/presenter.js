@@ -49,6 +49,8 @@ const Party = () => {
             <div className="party__schedules">
               <ScheduleCard />
               <ScheduleCard />
+              <ScheduleCard isTimeUp={true} />
+              <ScheduleCard isTimeUp={true} />
             </div>
           </div>
         </div>

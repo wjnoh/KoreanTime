@@ -12,6 +12,9 @@
   &:last-child {
     margin-bottom: 0;
   }
+  &.party__schedule--blur {
+    opacity: 0.5;
+  }
   .party__schedule-info {
     span {
       display: block;
@@ -31,18 +34,21 @@
       font-size: 14px;
     }
   }
-  .schedule-location {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 30px;
-    padding: 10px;
-    background-color: $main-sky-blue;
-    border-radius: 20px;
-    color: white;
-    margin-top: 15px;
-    font-size: 15px;
-    cursor: pointer;
+  a {
+    color: inherit;
+    text-decoration: none;
+    .schedule-location {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 30px;
+      padding: 10px;
+      background-color: $main-sky-blue;
+      border-radius: 20px;
+      color: white;
+      margin-top: 15px;
+      font-size: 15px;
+    }
   }
 }
