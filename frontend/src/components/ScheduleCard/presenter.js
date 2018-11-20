@@ -20,7 +20,9 @@ const ScheduleCard = props => {
         <span className="schedule-message">늦지 않게 참석해주세요!</span>
       </div>
       <Link to="/party/1/map/1">
-        <div className="schedule-location">팀원 위치 확인</div>
+        <div className="schedule-location">
+          {props.isTimeUp ? "결과 확인" : "팀원 위치 확인"}
+        </div>
       </Link>
     </div>
   );
