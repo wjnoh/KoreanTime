@@ -42,7 +42,7 @@
       bottom: 0;
       background-color: white;
       border-radius: 0 0 5px 5px;
-      z-index: 10;
+      z-index: 20;
       transition: 0.2s all linear;
       padding: 0 20px;
       display: flex;
@@ -104,8 +104,10 @@
         .content-arrived {
           margin-top: 15px;
           font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
           .person-name {
-            display: inline-block;
             margin-left: 5px;
             padding: 5px;
             background-color: black;
@@ -117,8 +119,10 @@
         .content-notArrived {
           margin-top: 10px;
           font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
           .person-name {
-            display: inline-block;
             margin-left: 5px;
             padding: 5px;
             background-color: black;
@@ -138,6 +142,7 @@
       background-color: black;
       opacity: 0.5;
       display: none;
+      z-index: 15;
       &.map-dim--open {
         display: block;
       }

@@ -3,18 +3,18 @@ import Map from "./presenter";
 
 class Container extends Component {
   state = {
-    mapInfoOpen: true
+    isInfoOpen: true
   };
 
-  openMapInfo = () => {
+  handleInfoOpen = () => {
     this.setState({
-      mapInfoOpen: true
+      isInfoOpen: true
     });
   };
 
-  closeMapInfo = () => {
+  handleInfoClose = () => {
     this.setState({
-      mapInfoOpen: false
+      isInfoOpen: false
     });
   };
 
@@ -23,8 +23,8 @@ class Container extends Component {
       <Map
         {...this.state}
         {...this.props}
-        openMapInfo={this.openMapInfo}
-        closeMapInfo={this.closeMapInfo}
+        handleInfoOpen={this.handleInfoOpen}
+        handleInfoClose={this.handleInfoClose}
       />
     );
   }

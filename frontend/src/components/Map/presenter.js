@@ -74,7 +74,7 @@ const Map = props => {
           </GoogleMapReact>
           <div
             className={
-              props.mapInfoOpen ? "map-info map-info--open" : "map-info"
+              props.isInfoOpen ? "map-info map-info--open" : "map-info"
             }
             onClick={e => {
               e.preventDefault();
@@ -82,17 +82,19 @@ const Map = props => {
           >
             <div
               className={
-                props.mapInfoOpen ? "map-button map-button--open" : "map-button"
+                props.isInfoOpen ? "map-button map-button--open" : "map-button"
               }
               onClick={() => {
-                props.mapInfoOpen ? props.closeMapInfo() : props.openMapInfo();
+                props.isInfoOpen
+                  ? props.handleInfoClose()
+                  : props.handleInfoOpen();
               }}
             >
               <Ionicon icon="md-information" />
             </div>
             <div
               className={
-                props.mapInfoOpen
+                props.isInfoOpen
                   ? "map-info__content map-info__content--open"
                   : "map-info__content"
               }
@@ -145,8 +147,8 @@ const Map = props => {
             </div>
           </div>
           <div
-            className={props.mapInfoOpen ? "map-dim map-dim--open" : "map-dim"}
-            onClick={() => props.closeMapInfo()}
+            className={props.isInfoOpen ? "map-dim map-dim--open" : "map-dim"}
+            onClick={() => props.handleInfoClose()}
           />
         </section>
       </div>
@@ -155,9 +157,9 @@ const Map = props => {
 };
 
 Map.propTypes = {
-  mapInfoOpen: PropTypes.bool.isRequired,
-  openMapInfo: PropTypes.func.isRequired,
-  closeMapInfo: PropTypes.func.isRequired
+  isInfoOpen: PropTypes.bool.isRequired,
+  handleInfoOpen: PropTypes.func.isRequired,
+  handleInfoClose: PropTypes.func.isRequired
 };
 
 export default Map;
