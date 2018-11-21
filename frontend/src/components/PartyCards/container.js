@@ -3,7 +3,7 @@ import PartyCards from "./presenter";
 
 class Container extends Component {
   state = {
-    isPartyModalOpen: true
+    isPartyModalOpen: false
   };
 
   handlePartyModalOpen = () => {

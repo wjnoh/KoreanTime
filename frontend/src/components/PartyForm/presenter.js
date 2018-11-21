@@ -20,8 +20,9 @@ const PartyForm = props => {
             type="text"
             className="input"
             placeholder="모임의 이름을 입력하세요."
+            required
           />
-          <div className="submit-button">모임 만들기</div>
+          <button className="submit-button">모임 만들기</button>
         </div>
       </form>
     </div>

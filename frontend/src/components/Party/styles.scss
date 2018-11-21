@@ -73,6 +73,16 @@
             padding: 6px 10px;
             border-radius: 20px;
           }
+          .info-invite {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white;
+            font-size: 15px;
+            background-color: $oc-red-5;
+            padding: 6px 10px;
+            border-radius: 20px;
+          }
         }
         .party__menus {
           width: 100%;
