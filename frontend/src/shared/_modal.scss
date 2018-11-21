@@ -1,0 +1,25 @@
+@import "./_mediaQuery.scss";
+@import "./_color.scss";
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  overflow-y: auto;
+  display: block;
+  &.modal--none {
+    display: none;
+  }
+  .modal__content {
+    position: absolute;
+    z-index: 300;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

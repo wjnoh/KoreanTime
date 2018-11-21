@@ -2,7 +2,8 @@
 @import "../../shared/_color.scss";
 
 .party-cards {
-  h1 {
+  padding-bottom: 20px;
+  & > h1 {
     max-width: 900px;
     margin: 0 auto;
     margin-bottom: 30px;
