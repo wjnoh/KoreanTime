@@ -1,0 +1,20 @@
+@import "./_mediaQuery.scss";
+@import "./_color.scss";
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif !important;
+  letter-spacing: 1px;
+  color: $oc-gray-9;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: $oc-gray-1;
+}

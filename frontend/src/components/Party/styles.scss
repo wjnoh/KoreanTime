@@ -1,0 +1,132 @@
+@import "../../shared/_mediaQuery.scss";
+@import "../../shared/_color.scss";
+
+.party {
+  padding-bottom: 30px;
+  .party__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    @include mobile {
+      padding: 0 15px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      position: relative;
+      color: white;
+      font-size: 22px;
+      z-index: 10;
+    }
+    .party__cols {
+      display: flex;
+      justify-content: space-between;
+      @include tablet {
+        display: block;
+      }
+      @include mobile {
+        display: block;
+      }
+      .party__col {
+        position: relative;
+        width: 48%;
+        margin-bottom: 20px;
+        @include tablet {
+          width: 100%;
+        }
+        @include mobile {
+          width: 100%;
+        }
+        .party__info {
+          width: 100%;
+          height: 170px;
+          margin-bottom: 20px;
+          background-color: white;
+          box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+          }
+          .info-number {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 15px;
+            background-color: $main-sky-blue;
+            padding: 6px 10px;
+            border-radius: 20px;
+          }
+          .info-when {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: white;
+            font-size: 15px;
+            background-color: $main-sky-blue;
+            padding: 6px 10px;
+            border-radius: 20px;
+          }
+          .info-invite {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white;
+            font-size: 15px;
+            background-color: $oc-red-5;
+            padding: 6px 10px;
+            border-radius: 20px;
+          }
+        }
+        .party__menus {
+          width: 100%;
+          height: 110px;
+          background-color: white;
+          box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 20px;
+          @include mobile {
+            padding: 0 10px;
+          }
+          .party__menu {
+            text-align: center;
+            position: relative;
+            bottom: 2.5px;
+            cursor: pointer;
+            img {
+              width: 80px;
+              @include mobile {
+                width: 100%;
+              }
+            }
+            span {
+              display: block;
+              font-size: 13px;
+              position: relative;
+              bottom: 3px;
+            }
+          }
+        }
+        .party__schedules {
+          width: 100%;
+          height: 100%;
+          @include tablet {
+            margin-top: 20px;
+          }
+          @include mobile {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

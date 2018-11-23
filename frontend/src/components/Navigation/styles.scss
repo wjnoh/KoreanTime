@@ -1,0 +1,43 @@
+@import "../../shared/_mediaQuery.scss";
+@import "../../shared/_color.scss";
+
+.nav {
+  width: 100%;
+  height: 260px;
+  background-color: $main-blue;
+  position: absolute;
+  .nav__wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    .nav__items {
+      max-width: 900px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav__item {
+        color: black;
+        cursor: pointer;
+        a {
+          color: inherit;
+          text-decoration: none;
+          img {
+            width: 140px;
+            height: auto;
+          }
+        }
+        svg {
+          fill: black;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

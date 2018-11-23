@@ -1,0 +1,151 @@
+@import "../../shared/_mediaQuery.scss";
+@import "../../shared/_color.scss";
+
+.map__wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include mobile {
+    padding: 0;
+  }
+  .map-title {
+    position: relative;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 20px;
+      color: white;
+      @include mobile {
+        padding: 0 20px;
+      }
+    }
+  }
+  .map {
+    position: relative;
+    height: calc(90vh - 200px);
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    @include mobile {
+      height: calc(100vh - 200px);
+      border-radius: 0;
+    }
+    div {
+      border-radius: 5px;
+      @include mobile {
+        border-radius: 0;
+      }
+    }
+    .map-info {
+      width: 100%;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+      border-radius: 0 0 5px 5px;
+      z-index: 20;
+      transition: 0.2s all linear;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      @include mobile {
+        border-radius: 0;
+      }
+      &.map-info--open {
+        height: 200px;
+        padding: 20px;
+      }
+      .map-button {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: $main-sky-blue;
+        border-radius: 2px;
+        bottom: 23px;
+        right: 60px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+        cursor: pointer;
+        transition: 0.2s all linear;
+        &.map-button--open {
+          bottom: 223px;
+        }
+        svg {
+          fill: white;
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .map-info__content {
+        opacity: 0;
+        visibility: hidden;
+        &.map-info__content--open {
+          opacity: 1;
+          visibility: visible;
+          transition: 0.2s all linear;
+        }
+        span {
+          display: block;
+        }
+        .content-title {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .content-when {
+          margin-top: 15px;
+          font-size: 15px;
+        }
+        .content-where {
+          margin-top: 10px;
+          font-size: 15px;
+        }
+        .content-arrived {
+          margin-top: 15px;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          .person-name {
+            margin-left: 5px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+        .content-notArrived {
+          margin-top: 10px;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          .person-name {
+            margin-left: 5px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .map-dim {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: black;
+      opacity: 0.5;
+      display: none;
+      z-index: 15;
+      &.map-dim--open {
+        display: block;
+      }
+    }
+  }
+}
