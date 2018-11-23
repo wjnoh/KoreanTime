@@ -18,6 +18,7 @@ const colorArray = [
 const Map = props => {
   return (
     <>
+      <div className="background" />
       <div className="map__wrapper">
         <div className="map-title">
           <h1>팀원 위치 확인</h1>

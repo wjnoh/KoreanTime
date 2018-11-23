@@ -18,3 +18,16 @@ body,
 body {
   background-color: $oc-gray-1;
 }
+
+.background {
+  width: 100%;
+  height: 210px;
+  background-color: $main-blue;
+  position: absolute;
+}
+
+.bold {
+  font-size: inherit !important;
+  display: inline !important;
+  font-weight: bold !important;
+}
