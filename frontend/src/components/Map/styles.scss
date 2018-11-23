@@ -27,7 +27,7 @@
     border-radius: 5px;
     overflow: hidden;
     @include mobile {
-      height: calc(100vh - 200px);
+      height: calc(100vh - 100px);
       border-radius: 0;
     }
     div {
