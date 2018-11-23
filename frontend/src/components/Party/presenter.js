@@ -1,8 +1,10 @@
 import React from "react";
 import ScheduleCard from "../ScheduleCard";
+import ScheduleAdd from "../ScheduleAdd";
+import PropTypes from "prop-types";
 import "./styles.scss";
 
-const Party = () => {
+const Party = props => {
   return (
     <section className="party">
       <div className="party__container">
@@ -16,7 +18,10 @@ const Party = () => {
               <span className="info-invite">초대코드 : gTZX4</span>
             </div>
             <div className="party__menus">
-              <div className="party__menu">
+              <div
+                className="party__menu"
+                onClick={() => props.handleScheduleModalOpen()}
+              >
                 <img
                   src={require("../../images/icons/write.png")}
                   alt="add schedule"
@@ -56,8 +61,24 @@ const Party = () => {
           </div>
         </div>
       </div>
+      <div
+        className={props.isScheduleModalOpen ? "modal" : "modal modal--none"}
+        onClick={() => props.handleScheduleModalClose()}
+      >
+        <div className="modal__content" onClick={e => e.stopPropagation()}>
+          <ScheduleAdd
+            handleScheduleModalClose={props.handleScheduleModalClose}
+          />
+        </div>
+      </div>
     </section>
   );
+};
+
+Party.propTypes = {
+  isScheduleModalOpen: PropTypes.bool.isRequired,
+  handleScheduleModalOpen: PropTypes.func.isRequired,
+  handleScheduleModalClose: PropTypes.func.isRequired
 };
 
 export default Party;
