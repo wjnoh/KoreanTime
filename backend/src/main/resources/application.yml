@@ -1,13 +1,21 @@
 spring:
+  devtools:
+    livereload:
+      enabled: true
   datasource:
-    url: jdbc:h2:mem:devdb
+    url: jdbc:h2:mem:test
     username: sa
     password:
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 2003739639664047
+            client-secret: 245d9210d306727a330e6270fdd44c69
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+        security: debug
