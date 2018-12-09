@@ -10,15 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.List;
 
 @SpringBootApplication
-public class Application implements WebMvcConfigurer {
-
-    @Autowired
-    private UserArgumentResolver userArgumentResolver;
-
-    @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
-        resolvers.add(userArgumentResolver);
-    }
+public class Application{
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

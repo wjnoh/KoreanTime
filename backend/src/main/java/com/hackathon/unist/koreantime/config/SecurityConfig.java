@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/oauth2/**", "/login**").permitAll()
+                .antMatchers("/", "/oauth2/**", "/login**", "/login/**").permitAll()
                 .anyRequest().authenticated()
                     .and()
                 .oauth2Login()
@@ -46,6 +46,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             return CommonOAuth2Provider.FACEBOOK.getBuilder(client)
                     .clientId(registration.getClientId())
                     .clientSecret(registration.getClientSecret())
+                    .authorizationUri("https://www.facebook.com/v3.2/dialog/oauth")
+                    .tokenUri("https://graph.facebook.com/v3.2/oauth/access_token")
                     .userInfoUri("https://graph.facebook.com/me?fields=id,name,email,link")
                     .scope("email")
                     .build();
